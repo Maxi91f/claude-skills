@@ -1,0 +1,16 @@
+# {{TITLE}}
+
+## Description
+
+{{DESCRIPTION}}
+
+## Details
+
+{{DETAILS}}
+
+## Metadata
+
+- Linear ID: {{LINEAR_ID}}
+- Priority: {{PRIORITY}}
+- Labels: {{LABELS}}
+- Created: {{TIMESTAMP}}
