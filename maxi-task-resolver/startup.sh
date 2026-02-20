@@ -103,7 +103,9 @@ echo "Copying critical configuration files..."
 # Critical files - needed for AWS auth and user context
 if [ -f "$GIT_ROOT/.envrc" ]; then
   cp "$GIT_ROOT/.envrc" "$WORKTREE_PATH/.envrc"
-  echo "  ✓ Copied .envrc"
+  # Auto-allow direnv for the new worktree
+  (cd "$WORKTREE_PATH" && direnv allow 2>/dev/null) || true
+  echo "  ✓ Copied .envrc (direnv allowed)"
 else
   echo "  ⚠ Warning: .envrc not found in main repo"
 fi
